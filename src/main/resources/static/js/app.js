@@ -4,10 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('traffic-mgmt-webapp', ['ionic','ngSanitize','btford.socket-io'])
+// 'starter.controllers' is found in controllers.js   ,'btford.socket-io'
+angular.module('traffic-mgmt-webapp', ['ionic','ngSanitize', 'ngStomp'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +21,8 @@ angular.module('traffic-mgmt-webapp', ['ionic','ngSanitize','btford.socket-io'])
       StatusBar.styleDefault();
     }
   });
+
+  //$rootScope.baseURL = "ws://dev-irewards.cloudapp.net:8081";
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

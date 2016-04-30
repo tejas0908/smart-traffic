@@ -18,8 +18,9 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-   <script src="lib/socket.io.js"></script>
-  <script src="lib/socket.js"></script>
+  <!-- <script src="lib/socket.io.js"></script>
+  <script src="lib/socket.js"></script> -->
+  <script src="lib/ng-stomp.standalone.min.js"></script>
   <!-- your app's js -->
   <script src="js/app.js"></script>
   <script src="js/services/CanvasService.js"></script>

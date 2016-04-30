@@ -25,6 +25,7 @@ public class RegisterPingServiceImpl implements RegisterPingService{
     @Override
     public void registerPing(RoadPing ping) throws Exception {
         LOGGER.info("Inserting ping into redis "+ping);
+        template.opsForList().leftPush("roads", ping.getRoadId());
         template.opsForList().leftPush(ping.getRoadId(),ping);
     }
 }
