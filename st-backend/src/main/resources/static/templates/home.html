@@ -1,0 +1,181 @@
+<ion-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Smart Traffic Management</h1>
+    <!-- <div class="buttons">
+      <button class="button-icon ion-wrench expense-back-btn" ng-click="setServerAddress()"></button>
+    </div> -->
+  </ion-header-bar>
+  <ion-content>
+  <!-- <div class="item range range-positive slider-width">
+    <i class="icon ion-ios-sunny-outline"></i>
+    <input type="range" name="volume" min="1" max="100" value="33">
+    <i class="icon ion-ios-sunny"></i>
+  </div>
+  <div class="item range range-positive slider-width">
+    <i class="icon ion-ios-sunny-outline"></i>
+    <input type="range" name="volume" min="1" max="100" value="33">
+    <i class="icon ion-ios-sunny"></i>
+  </div>
+  <div class="item range range-positive slider-width">
+    <i class="icon ion-ios-sunny-outline"></i>
+    <input type="range" name="volume" min="1" max="100" value="33">
+    <i class="icon ion-ios-sunny"></i>
+  </div> -->
+
+    <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<canvas id="myCanvas" width="1500" height="700" style="border:1px solid #d3d3d3;position: absolute">
+  Your browser does not support the HTML5 canvas tag.</canvas>
+
+  <div class="range range-positive" style="position:fixed; top:263px; left:20px">
+    <h2>{{roads[8].conjestionLevel}}</h2>
+    <i class="icon ion-ios-person"></i>
+    <input type="range" name="volume" min="1" max="100" ng-model-options="{debounce:500}" ng-model="roads[8].conjestionLevel" ng-change="updateConjestion(8)">
+    <i class="icon ion-ios-people"></i>
+  </div>
+  <!-- <div class="range range-positive slider-width" style="position:fixed; top:423px; left:20px">
+    <h2>33</h2>
+  <i class="icon ion-ios-person"></i>
+  <input type="range" name="volume" min="1" max="100" value="33">
+  <i class="icon ion-ios-people"></i>
+  </div> -->
+  <!-- <div class="range range-positive slider-width" style="position:fixed; top:263px; left:1222px">
+    <h2>33</h2>
+  <i class="icon ion-ios-person"></i>
+  <input type="range" name="volume" min="1" max="100" value="33">
+  <i class="icon ion-ios-people"></i>
+  </div> -->
+  <div class="range range-positive slider-width" style="position:fixed; top:423px; left:1222px">
+    <h2>{{roads[4].conjestionLevel}}</h2>
+    <i class="icon ion-ios-person"></i>
+    <input type="range" name="volume" min="1" max="100" ng-model-options="{debounce:500}" ng-model="roads[4].conjestionLevel" ng-change="updateConjestion(4)">
+    <i class="icon ion-ios-people"></i>
+  </div>
+
+  <div class="range range-positive slider-width" style="position:fixed; top:21px; left:821px">
+    <h2>{{roads[2].conjestionLevel}}</h2>
+    <i class="icon ion-ios-person"></i>
+    <input type="range" name="volume" min="1" max="100" ng-model-options="{debounce:500}" ng-model="roads[2].conjestionLevel" ng-change="updateConjestion(2)">
+    <i class="icon ion-ios-people"></i>
+  </div>
+  <!-- <div class="range range-positive slider-width" style="position:fixed; top:21px; left:421px">
+    <h2>33</h2>
+  <i class="icon ion-ios-person"></i>
+  <input type="range" name="volume" min="1" max="100" value="33">
+  <i class="icon ion-ios-people"></i>
+  </div> -->
+  <div class="range range-positive slider-width" style="position:fixed; top:664px; left:421px">
+    <h2>{{roads[6].conjestionLevel}}</h2>
+    <i class="icon ion-ios-person"></i>
+    <input type="range" name="volume" min="1" max="100" ng-model-options="{debounce:500}" ng-model="roads[6].conjestionLevel" ng-change="updateConjestion(6)">
+    <i class="icon ion-ios-people"></i>
+  </div>
+ <!-- <div class="range range-positive slider-width" style="position:fixed; top:664px; left:821px">
+   <h2>33</h2>
+ <i class="icon ion-ios-person"></i>
+ <input type="range" name="volume" min="1" max="100" value="33">
+ <i class="icon ion-ios-people"></i>
+  </div> -->
+
+  <i class="icon ion-arrow-right-a" style="position: fixed;top: 328px;left: 562px;color: white;font-size: 36px;"></i>
+  <!-- <i class="icon ion-arrow-right-a" style="position: fixed;top: 328px;left: 1124px;color: white;font-size: 36px;"></i> -->
+  <!-- <i class="icon ion-arrow-left-a" style="position: fixed;top: 378px;left: 380px;color: white;font-size: 36px;"></i> -->
+  <i class="icon ion-arrow-left-a" style="position: fixed;top: 378px;left: 940px;color: white;font-size: 36px;"></i>
+
+  <!-- <i class="icon ion-arrow-up-a" style="position: fixed;top: 157px;left: 731px;color: white;font-size: 36px;"></i> -->
+  <i class="icon ion-arrow-up-a" style="position: fixed;top: 537px;left: 731px;color: white;font-size: 36px;"></i>
+  <!-- <i class="icon ion-arrow-down-a" style="position: fixed;top: 540px;left: 782px;color: white;font-size: 36px;"></i> -->
+  <i class="icon ion-arrow-down-a" style="position: fixed;top: 161px;left: 782px;color: white;font-size: 36px;"></i>
+
+<!-- <div style="position: fixed;top: 317px;left: 759px;font-size: 36px;">
+    <i class="icon ion-arrow-up-b balanced"></i><br/>
+    <i class="icon ion-arrow-left-b balanced"></i><br/>
+    <i class="icon ion-arrow-down-b balanced"></i>
+</div> -->
+
+<div style="position: fixed;top: 317px;left: 757px;font-size: 36px;" ng-show="currentGreenSignal.signalId==4">
+    <i class="icon ion-forward balanced rotate-270"></i><br/>
+    <i class="icon ion-arrow-left-a balanced"></i><br/>
+    <i class="icon ion-reply balanced rotate-270"></i>
+</div>
+
+<div style="position: fixed;top: 318px;left: 758px;font-size: 36px;" ng-show="currentGreenSignal.signalId==8">
+    <i class="icon ion-reply balanced rotate-90"></i><br/>
+    <i class="icon ion-arrow-right-a balanced"></i><br/>
+    <i class="icon ion-forward balanced rotate-90"></i>
+</div>
+
+<div style="position: fixed;top: 354px;left: 720px;font-size: 36px;" ng-show="currentGreenSignal.signalId==2">
+    <i class="icon ion-forward balanced rotate-180"></i>
+    <i class="icon ion-arrow-down-a balanced"></i>
+    <i class="icon ion-reply balanced rotate-180"></i>
+</div>
+
+<div style="position: fixed;top: 353px;left: 720px;font-size: 36px;" ng-show="currentGreenSignal.signalId==6">
+    <i class="icon ion-reply balanced"></i>
+    <i class="icon ion-arrow-up-a balanced"></i>
+    <i class="icon ion-forward balanced"></i>
+</div>
+
+
+<div class="list card" style="position: fixed;top: 51px;left: 814px;">
+  <div class="item item-divider item-icon-right history-item">
+    Signal 1
+    <i class="icon ion-arrow-down-a"></i>
+  </div>
+  <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[2].history | orderBy:'time':true">
+    <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i>
+    {{record.time | date:'hh:mm:ss:sss'}}
+  </a>
+</div>
+
+<div class="list card" style="position: fixed;top: 406px;left: 885px;">
+  <div class="item item-divider item-icon-right history-item">
+    Signal 2
+    <i class="icon ion-arrow-left-a"></i>
+  </div>
+  <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[4].history | orderBy:'time':true">
+    <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i>
+    {{record.time | date:'hh:mm:ss:sss'}}
+  </a>
+</div>
+
+<div class="list card" style="position: fixed;top: 472px;left: 546px;">
+  <div class="item item-divider item-icon-right history-item">
+    Signal 3
+    <i class="icon ion-arrow-up-a"></i>
+  </div>
+  <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[6].history | orderBy:'time':true">
+    <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i>
+    {{record.time | date:'hh:mm:ss:sss'}}
+  </a>
+</div>
+
+<div class="list card" style="position: fixed;top: 120px;left: 472px;">
+  <div class="item item-divider item-icon-right history-item">
+    Signal 4
+    <i class="icon ion-arrow-right-a"></i>
+  </div>
+  <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[8].history | orderBy:'time':true">
+    <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i>
+    {{record.time | date:'hh:mm:ss:sss'}}
+  </a>
+</div>
+<!--   display: -webkit-inline-box; -->
+  <div style="position: fixed;top: 255px;left: 825px;" ng-show="currentGreenSignal.signalId==2">
+    <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+    <i class="icon ion-arrow-down-a balanced" style="font-size: 36px;"></i>
+  </div>
+  <div style="position: fixed;top: 255px;left: 653px;" ng-show="currentGreenSignal.signalId==8">
+    <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+    <i class="icon ion-arrow-right-a balanced" style="font-size: 36px;"></i>
+  </div>
+  <div style="position: fixed;top: 425px;left:826px;" ng-show="currentGreenSignal.signalId==4">
+    <i class="icon ion-arrow-left-a balanced" style="font-size: 36px;"></i>
+    <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+  </div>
+  <div style="position: fixed;top: 425px;left:649px;" ng-show="currentGreenSignal.signalId==6">
+    &nbsp;&nbsp;<i class="icon ion-arrow-up-a balanced" style="font-size: 36px;"></i>
+    <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+  </div>
+  </ion-content>
+</ion-view>

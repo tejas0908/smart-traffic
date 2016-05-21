@@ -17,3 +17,5 @@ gradle-app.setting
 *.iml
 data
 gradle
+
+.DS_Store
