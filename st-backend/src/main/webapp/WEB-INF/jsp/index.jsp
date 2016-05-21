@@ -20,12 +20,22 @@
 
   <!-- <script src="lib/socket.io.js"></script>
   <script src="lib/socket.js"></script> -->
+  <!-- <script src="lib/angular-timer.min.js"></script> -->
   <script src="lib/ng-stomp.standalone.min.js"></script>
+  <!-- <script src="lib/ng-file-upload/ng-file-upload.min.js"></script> -->
+  <!-- <script src="lib/moment/min/moment.min.js"></script>
+  <script src="lib/moment/min/locales.min.js"></script>
+  <script src="lib/humanize-duration/humanize-duration.js"></script> -->
   <!-- your app's js -->
   <script src="js/app.js"></script>
   <script src="js/services/CanvasService.js"></script>
   <script src="js/services/SocketService.js"></script>
-    <script src="js/homeCtrl.js"></script>
+  <script src="js/homeCtrl.js"></script>
+  <script src="js/demoCtrl.js"></script>
+  <script src="js/services/ImageService.js"></script>
+  <script src="js/services/fileUploadDir.js"></script>
+
+
   </head>
   <body ng-app="traffic-mgmt-webapp">
     <ion-nav-view animation="slide-left-right"></ion-nav-view>

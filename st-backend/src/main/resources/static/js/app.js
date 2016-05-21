@@ -38,9 +38,14 @@ angular.module('traffic-mgmt-webapp', ['ionic','ngSanitize', 'ngStomp'])
       url: "/home",
       templateUrl: "templates/home.html",
       controller: 'HomeCtrl'
-    });
+    })
+    .state('demo', {
+        url: "/demo",
+        templateUrl: "templates/demo.html",
+        controller: 'DemoCtrl'
+      });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/demo');
 
 });

@@ -1,0 +1,161 @@
+<ion-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Smart Traffic Management</h1>
+    <!-- <div class="buttons">
+      <button class="button-icon ion-wrench expense-back-btn" ng-click="setServerAddress()"></button>
+    </div> -->
+  </ion-header-bar>
+  <ion-content>
+    <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <canvas id="myCanvas2" width="1500" height="700" style="border:1px solid #d3d3d3;position: absolute">
+      Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <i class="icon ion-arrow-right-a" style="position: fixed;top: 328px;left: 624px;color: white;font-size: 36px;"></i>
+    <!-- <i class="icon ion-arrow-right-a" style="position: fixed;top: 328px;left: 1124px;color: white;font-size: 36px;"></i> -->
+    <!-- <i class="icon ion-arrow-left-a" style="position: fixed;top: 378px;left: 380px;color: white;font-size: 36px;"></i> -->
+    <i class="icon ion-arrow-left-a" style="position: fixed;top: 378px;left: 879px;color: white;font-size: 36px;"></i>
+
+    <!-- <i class="icon ion-arrow-up-a" style="position: fixed;top: 157px;left: 731px;color: white;font-size: 36px;"></i> -->
+    <i class="icon ion-arrow-up-a" style="position: fixed;top: 476px;left: 731px;color: white;font-size: 36px;"></i>
+    <!-- <i class="icon ion-arrow-down-a" style="position: fixed;top: 540px;left: 782px;color: white;font-size: 36px;"></i> -->
+    <i class="icon ion-arrow-down-a" style="position: fixed;top: 228px;left: 782px;color: white;font-size: 36px;"></i>
+
+    <!-- <div style="position: fixed;top: 317px;left: 759px;font-size: 36px;">
+    <i class="icon ion-arrow-up-b balanced"></i><br/>
+    <i class="icon ion-arrow-left-b balanced"></i><br/>
+    <i class="icon ion-arrow-down-b balanced"></i>
+</div> -->
+
+    <div style="position: fixed;top: 317px;left: 757px;font-size: 36px;" ng-show="currentGreenSignal.signalId==4">
+      <i class="icon ion-forward balanced rotate-270"></i>
+      <br/>
+      <i class="icon ion-arrow-left-a balanced"></i>
+      <br/>
+      <i class="icon ion-reply balanced rotate-270"></i>
+    </div>
+
+    <div style="position: fixed;top: 318px;left: 758px;font-size: 36px;" ng-show="currentGreenSignal.signalId==8">
+      <i class="icon ion-reply balanced rotate-90"></i>
+      <br/>
+      <i class="icon ion-arrow-right-a balanced"></i>
+      <br/>
+      <i class="icon ion-forward balanced rotate-90"></i>
+    </div>
+
+    <div style="position: fixed;top: 354px;left: 720px;font-size: 36px;" ng-show="currentGreenSignal.signalId==2">
+      <i class="icon ion-forward balanced rotate-180"></i>
+      <i class="icon ion-arrow-down-a balanced"></i>
+      <i class="icon ion-reply balanced rotate-180"></i>
+    </div>
+
+    <div style="position: fixed;top: 353px;left: 720px;font-size: 36px;" ng-show="currentGreenSignal.signalId==6">
+      <i class="icon ion-reply balanced"></i>
+      <i class="icon ion-arrow-up-a balanced"></i>
+      <i class="icon ion-forward balanced"></i>
+    </div>
+
+
+    <!-- <div class="list card" style="position: fixed;top: 51px;left: 814px;">
+      <div class="item item-divider item-icon-right history-item">
+        Signal 1
+        <i class="icon ion-arrow-down-a"></i>
+      </div>
+      <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[2].history | orderBy:'time':true">
+        <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i> {{record.time | date:'hh:mm:ss:sss'}}
+      </a>
+    </div>
+
+    <div class="list card" style="position: fixed;top: 406px;left: 885px;">
+      <div class="item item-divider item-icon-right history-item">
+        Signal 2
+        <i class="icon ion-arrow-left-a"></i>
+      </div>
+      <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[4].history | orderBy:'time':true">
+        <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i> {{record.time | date:'hh:mm:ss:sss'}}
+      </a>
+    </div>
+
+    <div class="list card" style="position: fixed;top: 472px;left: 546px;">
+      <div class="item item-divider item-icon-right history-item">
+        Signal 3
+        <i class="icon ion-arrow-up-a"></i>
+      </div>
+      <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[6].history | orderBy:'time':true">
+        <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i> {{record.time | date:'hh:mm:ss:sss'}}
+      </a>
+    </div>
+
+    <div class="list card" style="position: fixed;top: 120px;left: 472px;">
+      <div class="item item-divider item-icon-right history-item">
+        Signal 4
+        <i class="icon ion-arrow-right-a"></i>
+      </div>
+      <a class="item item-icon-left history-item" ng-class="{'item-positive':$index==0}" ng-repeat="record in signals[8].history | orderBy:'time':true">
+        <i class="icon ion-record" ng-class="{'balanced':record.signalStatus==1, 'assertive':record.signalStatus==0}" style="font-size: 25px;"></i> {{record.time | date:'hh:mm:ss:sss'}}
+      </a>
+    </div> -->
+
+    <!--   display: -webkit-inline-box; -->
+    <div style="position: fixed;top: 255px;left: 825px;" ng-show="currentGreenSignal.signalId==2">
+      <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+      <i class="icon ion-arrow-down-a balanced" style="font-size: 36px;"></i>
+    </div>
+    <div style="position: fixed;top: 255px;left: 653px;" ng-show="currentGreenSignal.signalId==8">
+      <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+      <i class="icon ion-arrow-right-a balanced" style="font-size: 36px;"></i>
+    </div>
+    <div style="position: fixed;top: 425px;left:826px;" ng-show="currentGreenSignal.signalId==4">
+      <i class="icon ion-arrow-left-a balanced" style="font-size: 36px;"></i>
+      <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+    </div>
+    <div style="position: fixed;top: 425px;left:649px;" ng-show="currentGreenSignal.signalId==6">
+      &nbsp;&nbsp;<i class="icon ion-arrow-up-a balanced" style="font-size: 36px;"></i>
+      <h3 class="balanced" style="margin:0px">{{counter.value}} Sec</h3> &nbsp;
+    </div>
+
+    <input style="position: fixed;top: 220px;left:821px;" file-model="roads[2].imageFile" type="file" onchange="angular.element(this).scope().setImage(this,2)" />
+    <input style="position: fixed;top: 424px;left:1241px;" file-model="roads[4].imageFile" type="file" onchange="angular.element(this).scope().setImage(this,4)" />
+    <input style="position: fixed;top: 490px;left:464px;" file-model="roads[6].imageFile" type="file" onchange="angular.element(this).scope().setImage(this,6)" />
+    <input style="position: fixed;top: 288px;left:20px;" file-model="roads[8].imageFile" type="file" onchange="angular.element(this).scope().setImage(this,8)" />
+
+    <img style="position: fixed;top: 21px;left:623px;max-width: 300px;" ng-src="{{roads[2].imageSource}}" ng-show="roads[2].imageSource" />
+    <img style="position: fixed;top: 270px;left:937px;max-width: 300px;" ng-src="{{roads[4].imageSource}}" ng-show="roads[4].imageSource" />
+    <img style="position: fixed;top: 521px;left:623px;max-width: 300px;" ng-src="{{roads[6].imageSource}}" ng-show="roads[6].imageSource" />
+    <img style="position: fixed;top: 270px;left:300px;max-width: 300px;" ng-src="{{roads[8].imageSource}}" ng-show="roads[8].imageSource" />
+
+    <h4 style="position: fixed;top: 100px;left:940px;" ng-show="roads[2].nrOfvehicles">{{roads[2].nrOfvehicles}} vehicles</h4>
+    <h4 style="position: fixed;top: 470px;left:1244px;" ng-show="roads[4].nrOfvehicles">{{roads[4].nrOfvehicles}} vehicles</h4>
+    <h4 style="position: fixed;top: 590px;left:523px;" ng-show="roads[6].nrOfvehicles">{{roads[6].nrOfvehicles}} vehicles</h4>
+    <h4 style="position: fixed;top: 240px;left:209px;" ng-show="roads[8].nrOfvehicles">{{roads[8].nrOfvehicles}} vehicles</h4>
+
+    <!-- <h4 style="position: fixed;top: 100px;left:940px;">{{roads[2].nrOfvehicles}} vehicles</h4>
+    <h4 style="position: fixed;top: 470px;left:1244px;">{{roads[4].nrOfvehicles}} vehicles</h4>
+    <h4 style="position: fixed;top: 575px;left:980px;">{{roads[6].nrOfvehicles}} vehicles</h4>
+    <h4 style="position: fixed;top: 240px;left:80px;">{{roads[8].nrOfvehicles}} vehicles</h4> -->
+
+    <!-- <img style="position: fixed;top: 100px;left:100px;" data-ng-src="data:image/png;{{roads[2].imageFile}}" ng-show="roads[2].imageFile"/> -->
+    <!-- <div style="position: fixed;top: 359px;left:524px;" ng-show="roads[2].imageFile">{{roads[2].imageFile}}</div> -->
+    <!-- <input style="position: fixed;top: 212px;left:707px;" file-model="road2Image.value" type="file">Choose Image</input>
+     <input style="position: fixed;top: 336px;left:880px;" file-model="road4Image.value" type="file">Choose Image</input>
+     <input style="position: fixed;top: 485px;left:707px;" file-model="road6Image.value" type="file">Choose Image</input>
+     <input style="position: fixed;top: 359px;left:524px;" file-model="road8Image.value" type="file">Choose Image</input> -->
+
+
+    <div style="position: fixed;top: 23px;left:1400px;" class="button button-balanced" ng-click="upload()" ng-disabled="roads[2].imageFile==undefined || roads[4].imageFile==undefined || roads[6].imageFile==undefined || roads[8].imageFile==undefined">Send Images</div>
+    <div style="position: fixed;top: 40px;left:1300px;" ng-show="responseStatus.value">
+      <ion-spinner icon="android" class="spinner-positive"></ion-spinner>
+      <h3>Processing...</h3>
+    </div>
+
+<div style="position: relative;top: 700px;left:20px;">
+  <canvas id="boxcanvas" width="2000" height="1500" style="border:1px solid #d3d3d3;position: absolute">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <img ng-src="{{roads[2].imageSource}}" ng-show="roads[2].imageSource" id="img2"/>
+    <!-- <img ng-src="{{roads[4].imageSource}}" ng-show="roads[4].imageSource" id="img4"/>
+    <img ng-src="{{roads[8].imageSource}}" ng-show="roads[8].imageSource" id="img6"/>
+    <img ng-src="{{roads[6].imageSource}}" ng-show="roads[6].imageSource" id="img8"/> -->
+</div>
+
+  </ion-content>
+</ion-view>

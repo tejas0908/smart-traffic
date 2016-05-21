@@ -1,20 +1,13 @@
-##Instructions to Run:
+# Smart Traffic
+Smart Traffic IoT PoC for Techngage
 
-###Pre-requisites
-1. JDK 8
-2. Gradle
-
-###Install JDK 8
-http://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
-
-###Install Gradle
-https://docs.gradle.org/current/userguide/installation.html
-
-###Run the following command where the build.gradle file is located
+##Build
 ```bash
-gradle build bootRun
+gradle build
 ```
 
-###Visit the following link in your web browser
-http://localhost:8080
-
+##Run
+```bash
+gradle bootRun
+```
+Navigate to http://localhost:8080
