@@ -1,0 +1,11 @@
+outerwear
+dress
+hat
+top
+legging
+bag
+belt
+eyewear
+footwear
+skirt
+pant

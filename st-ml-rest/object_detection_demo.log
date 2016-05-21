@@ -1,0 +1,661 @@
+2016-02-15 18:06:45,899 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 110, in detect_url
+    result  = app.detector.detect(im,app.conf['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+AttributeError: 'Flask' object has no attribute 'conf'
+2016-02-15 18:08:54,368 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-15 18:09:29,851 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-15 18:09:31,099 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-15 18:10:36,171 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-15 18:10:38,995 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-15 18:11:08,435 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-15 18:11:31,227 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-15 18:12:25,698 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 111, in detect_url
+    result  = app.detector.detect(im,app.config['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+  File "/home/ctolabs/projects/show_select/detect.py", line 28, in detect
+    scores, boxes = im_detect(self.model, image)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 122, in im_detect
+    blobs, im_scales = _get_blobs(im, boxes)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 106, in _get_blobs
+    blobs['rois'] = _get_rois_blob(rois, im_scale_factors)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 69, in _get_rois_blob
+    rois, levels = _project_im_rois(im_rois, im_scale_factors)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 84, in _project_im_rois
+    im_rois = im_rois.astype(np.float, copy=False)
+AttributeError: 'NoneType' object has no attribute 'astype'
+2016-02-16 11:43:16,780 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-16 11:43:55,387 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-16 11:45:16,372 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 105, in detect_url
+    result=(False, 'Cannot open image from URL.')
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: index.html
+2016-02-16 11:51:57,961 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 111, in detect_url
+    result  = app.detector.detect(im,app.config['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+  File "/home/ctolabs/projects/show_select/detect.py", line 28, in detect
+    scores, boxes = im_detect(self.model, image)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 122, in im_detect
+    blobs, im_scales = _get_blobs(im, boxes)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 104, in _get_blobs
+    blobs['data'], im_scale_factors = _get_image_blob(im)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 34, in _get_image_blob
+    im_orig = im.astype(np.float32, copy=True)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/PIL/Image.py", line 628, in __getattr__
+    raise AttributeError(name)
+AttributeError: astype
+2016-02-16 11:59:56,309 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 111, in detect_url
+    result  = app.detector.detect(im,app.config['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+  File "/home/ctolabs/projects/show_select/detect.py", line 28, in detect
+    print image.shape
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/PIL/Image.py", line 628, in __getattr__
+    raise AttributeError(name)
+AttributeError: shape
+2016-02-16 12:12:13,130 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 111, in detect_url
+    result  = app.detector.detect(im,app.config['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+  File "/home/ctolabs/projects/show_select/detect.py", line 29, in detect
+    scores, boxes = im_detect(self.model, image)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 122, in im_detect
+    blobs, im_scales = _get_blobs(im, boxes)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 106, in _get_blobs
+    blobs['rois'] = _get_rois_blob(rois, im_scale_factors)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 69, in _get_rois_blob
+    rois, levels = _project_im_rois(im_rois, im_scale_factors)
+  File "/home/ctolabs/softwares/py-faster-rcnn/lib/fast_rcnn/test.py", line 84, in _project_im_rois
+    im_rois = im_rois.astype(np.float, copy=False)
+AttributeError: 'NoneType' object has no attribute 'astype'
+2016-02-16 12:23:35,096 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "app.py", line 111, in detect_url
+    result  = app.detector.detect(im,app.config['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+  File "/home/ctolabs/projects/show_select/detect.py", line 35, in detect
+    raise 'Invalid list CONF_THRESH. If it is not None or empty then it must be of length of number of categories'
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+2016-02-16 14:36:18,911 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 111, in detect_url
+    result  = app.detector.detect(im,app.config['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+  File "/home/ctolabs/projects/show_select/detect.py", line 42, in detect
+    keep = nms(dets, NMS_THRESH)
+NameError: global name 'nms' is not defined
+2016-02-16 15:07:43,568 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 111, in detect_url
+    result  = app.detector.detect(im,app.config['CONFIDENCE_THRESHOLD'],app.config['NMS_THRESHOLD'])
+KeyError: 'CONFIDENCE_THRESHOLD'
+2016-02-16 15:44:33,047 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 113, in detect_url
+    result['queryImage'] = imageurl
+TypeError: list indices must be integers, not str
+2016-02-16 15:47:51,596 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 112, in detect_url
+    result['result'] = {i:bbox_cls for i,bbox_cls in enumerate(result)}
+TypeError: list indices must be integers, not str
+2016-02-16 15:55:12,569 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 112, in detect_url
+    result['result'] = bbox_cls
+NameError: global name 'result' is not defined
+2016-02-16 16:03:55,226 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 117, in detect_url
+    return make_response(jsonify(result),200)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/json.py", line 238, in jsonify
+    indent=indent),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/json.py", line 126, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/__init__.py", line 251, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/json.py", line 83, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: array([ 178.67337036,  149.69839478,  364.66830444,  284.69100952], dtype=float32) is not JSON serializable
+2016-02-16 16:07:51,469 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/detect_url [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 117, in detect_url
+    return make_response(jsonify(result),200)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/json.py", line 238, in jsonify
+    indent=indent),
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/json.py", line 126, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/__init__.py", line 251, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/json.py", line 83, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: 0.87279183 is not JSON serializable
+2016-02-16 16:31:34,220 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/nms_threshold [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 164, in update_nms_threshold
+    nms_threshold = app.request.args.get('nms', '')
+AttributeError: 'Flask' object has no attribute 'request'
+2016-02-16 16:33:14,182 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/nms_threshold [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 168, in update_nms_threshold
+    return make_response(200)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/helpers.py", line 183, in make_response
+    return current_app.make_response(args)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1577, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/werkzeug/wrappers.py", line 847, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/werkzeug/wrappers.py", line 57, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/werkzeug/test.py", line 871, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'int' object is not callable
+2016-02-16 16:33:48,898 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/nms_threshold [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 168, in update_nms_threshold
+    return make_response(200)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/helpers.py", line 183, in make_response
+    return current_app.make_response(args)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1577, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/werkzeug/wrappers.py", line 847, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/werkzeug/test.py", line 871, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'int' object is not callable
+2016-02-16 16:40:00,179 - __main__ - ERROR - Exception on /ctolabs/detection/api/v1.0/nms_threshold [GET]
+Traceback (most recent call last):
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ctolabs/softwares/anaconda/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ctolabs/projects/show_select/app.py", line 41, in no_cache
+    response = make_response(view(*args, **kwargs))
+  File "/home/ctolabs/projects/show_select/app.py", line 168, in update_nms_threshold
+    app.detector.nms_threshold = nms_threshold
+  File "/home/ctolabs/projects/show_select/detect.py", line 68, in set_nms_threshold
+    raise Exception('NMS Threshold must be between 1 and 0 including 1')
+Exception: NMS Threshold must be between 1 and 0 including 1
